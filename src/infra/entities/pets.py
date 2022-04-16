@@ -22,3 +22,10 @@ class Pets(Base):
 
     def __rep__(self):
         return f"Pet [name = {self.name}, espicie = {self.specie}, user_id = {self.user_id}]"
+    
+    def __eq__(self, other):
+        if (self.id == other.id and self.name == other.name and
+                self.specie == other.specie and self.age == other.age
+                and self.user_id == other.user_id):
+            return True
+        return False

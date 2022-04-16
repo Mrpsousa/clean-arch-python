@@ -123,3 +123,4 @@ webpack-stats.json
 
 htmlcov/*
 storage.db
+.pytest_cache
