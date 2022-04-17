@@ -2,9 +2,10 @@ from typing import List
 from src.domain.models import Pets
 from src.infra.config import DBConnectionHandler
 from src.infra.entities import Pets as PetsModel
+from src.data.interfaces import PetRepositoryInterface
 
 
-class PetRepository:
+class PetRepository(PetRepositoryInterface):
     @classmethod
     def insert_pet(cls, name: str, specie: str, age: int, user_id: int) -> Pets:
         with DBConnectionHandler() as db_connection:
